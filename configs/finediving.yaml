@@ -1,0 +1,39 @@
+# cl model
+model: adam
+
+# experimental args
+lr: 0.0001
+weight_decay: 0.00001
+n_epochs: 150
+batch_size: 10
+gpus: [2, 3]
+num_workers: 16
+
+# backbone args
+feature_extractor: backbone.I3D_backbone.I3D_backbone
+feature_extractor_args:
+  I3D_class: 400
+  I3D_ckpt_path: ./weights/model_rgb.pth
+
+projector: backbone.Projector.Projector
+projector_args:
+  in_channels: 1024
+
+regressor: backbone.DAE.DAE
+regressor_args:
+  in_channels: 1024
+  out_channels: 1
+
+# dataset setting
+dataset: class-mtl
+dataset_args:
+  data_root: /home/zkl/Documents/Data/AQA/FineDiving/FINADiving_MTL_256s
+  label_path: /home/zkl/Documents/Data/AQA/FineDiving/Annotations/fine-grained_annotation_aqa.pkl
+  train_split: /home/zkl/Documents/Data/AQA/FineDiving/Annotations/train_split.pkl
+  test_split: /home/zkl/Documents/Data/AQA/FineDiving/Annotations/test_split.pkl
+  frame_length: 103
+  temporal_shift: [-3, 3]
+  usingDD: False
+
+#weight_path: ./outputs/domain-mtl/adam05/weights/last.pth
+
