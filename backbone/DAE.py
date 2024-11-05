@@ -28,7 +28,7 @@ class DAE(nn.Module):
         std = logvar.mul(0.5).exp()
         esp = torch.randn(*mu.size()).to(mu.device) 
         
-        z = mu + std
+        z = mu + std * esp
         return z
 
     def forward(self, x):

@@ -24,7 +24,7 @@
 
 This repository contains the implementation of MAGR, a novel approach designed for Continual Action Quality Assessment (CAQA). MAGR leverages Manifold Projector (MP) and Intra-Inter-Joint Graph Regularization (IIJ-GR) to address the challenges of feature deviation and regressor confusion across incremental sessions. The method aims to adapt to real-world complexities while safeguarding user privacy.
 
-![](framework.png)
+![](framework.jpg)
 
 
 
