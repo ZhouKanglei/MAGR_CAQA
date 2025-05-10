@@ -62,7 +62,7 @@ class ProcessorAQA(Processor):
             # self.args.logging.info('Best: \n' + pprint.pformat(state['best_metrics']))
         else:
             self.args.logging.info(f'No pretrained model found at {weight_path}.')
-            weight_path = weight_path.replace('best.pth', f'last-task{self.args.n_tasks}.pth')
+            weight_path = weight_path.replace('best.pth', 'last.pth')
 
             if os.path.exists(weight_path):
                 state = torch.load(weight_path)

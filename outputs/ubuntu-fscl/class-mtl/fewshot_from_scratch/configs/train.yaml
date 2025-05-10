@@ -1,0 +1,83 @@
+alpha: 1
+base_pretrain: false
+base_pretrain_model_path: weights/class-mtl05.pth
+base_pretrain_non_default: true
+batch_num: 1
+batch_size: 5
+batch_size_non_default: true
+beta: 1
+buffer_size: 50
+buffer_size_non_default: true
+config: ./configs/mtl_ubuntu.yaml
+config_non_default: true
+dataset: class-mtl
+dataset_args:
+  data_root: /mnt/Data/AQA/Sequence/MTL-AQA/new
+  frame_length: 103
+  label_path: /mnt/Data/AQA/Sequence/MTL-AQA/info/final_annotations_dict_with_dive_number.pkl
+  temporal_shift:
+  - -3
+  - 3
+  test_split: /mnt/Data/AQA/Sequence/MTL-AQA/info/test_split_0.pkl
+  train_split: /mnt/Data/AQA/Sequence/MTL-AQA/info/train_split_0.pkl
+  usingDD: false
+dataset_non_default: true
+debug_mode: false
+disable_log: false
+e_lambda: 1
+exp_dir: ./outputs/ubuntu-fscl/class-mtl/fewshot_from_scratch
+exp_name: fewshot_from_scratch
+exp_name_non_default: true
+feature_extractor: backbone.I3D_backbone.I3D_backbone
+feature_extractor_args:
+  I3D_ckpt_path: ./weights/model_rgb.pth
+  I3D_class: 400
+fewshot: true
+fewshot_non_default: true
+gamma: 1
+gpus:
+- 0
+- 1
+gpus_non_default: true
+ignore_other_metrics: false
+local_rank: 0
+log_dir: ./outputs/ubuntu-fscl/class-mtl/fewshot_from_scratch/logs
+log_file: ./outputs/ubuntu-fscl/class-mtl/fewshot_from_scratch/logs/train-20250510-132848.log
+logging: !!python/object/apply:logging.getLogger
+- MAGR-github
+lr: 0.0001
+minibatch_size: 3
+minibatch_size_non_default: true
+model: fea_gr
+model_non_default: true
+n_epochs: 50
+n_epochs_non_default: true
+n_tasks: 5
+n_tasks_non_default: true
+noise_level: 10
+non_verbose: false
+num_samples_per_task: 20
+num_workers: 16
+optim_mom: 0.0
+optim_nesterov: 0
+optim_wd: 0.0
+output_device: !!python/object/apply:torch.device
+- cuda
+- 0
+phase: train
+pretrain: false
+proj_name: MAGR-github
+projector: backbone.Projector.Projector
+projector_args:
+  in_channels: 1024
+regressor: backbone.DAE.DAE
+regressor_args:
+  in_channels: 1024
+  out_channels: 1
+seed: 1024
+timestamp: 20250510-132848
+user: ubuntu
+validation: false
+weight_decay: 1.0e-05
+weight_path: null
+weight_save_path: ./outputs/ubuntu-fscl/class-mtl/fewshot_from_scratch/weights/weight.pth

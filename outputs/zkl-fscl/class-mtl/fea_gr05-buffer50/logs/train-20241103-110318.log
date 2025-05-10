@@ -1,0 +1,102 @@
+24-11-03 11:03:18 | New ./outputs/zkl-fscl/class-mtl/fea_gr05-buffer50/logs/train-20241103-110318.log.
+24-11-03 11:03:18 | Save ./outputs/zkl-fscl/class-mtl/fea_gr05-buffer50/configs/train.yaml.
+24-11-03 11:03:18 | Args: 
+{'alpha': 1,
+ 'base_pretrain': True,
+ 'base_pretrain_model_path': 'weights/class-mtl05.pth',
+ 'base_pretrain_non_default': True,
+ 'batch_num': 1,
+ 'batch_size': 5,
+ 'batch_size_non_default': True,
+ 'beta': 1,
+ 'buffer_size': 50,
+ 'buffer_size_non_default': True,
+ 'config': './configs/mtl.yaml',
+ 'config_non_default': True,
+ 'dataset': 'class-mtl',
+ 'dataset_args': {'data_root': '/home/zkl/Documents/Data/AQA/Sequence/MTL-AQA/new',
+                  'frame_length': 103,
+                  'label_path': '/home/zkl/Documents/Data/AQA/Sequence/MTL-AQA/info/final_annotations_dict_with_dive_number.pkl',
+                  'temporal_shift': [-3, 3],
+                  'test_split': '/home/zkl/Documents/Data/AQA/Sequence/MTL-AQA/info/test_split_0.pkl',
+                  'train_split': '/home/zkl/Documents/Data/AQA/Sequence/MTL-AQA/info/train_split_0.pkl',
+                  'usingDD': False},
+ 'dataset_non_default': True,
+ 'debug_mode': False,
+ 'disable_log': False,
+ 'e_lambda': 1,
+ 'exp_dir': './outputs/zkl-fscl/class-mtl/fea_gr05-buffer50',
+ 'exp_name': 'fea_gr05-buffer50',
+ 'feature_extractor': 'backbone.I3D_backbone.I3D_backbone',
+ 'feature_extractor_args': {'I3D_ckpt_path': './weights/model_rgb.pth',
+                            'I3D_class': 400},
+ 'fewshot': True,
+ 'fewshot_non_default': True,
+ 'gamma': 1,
+ 'gpus': [2, 3],
+ 'gpus_non_default': True,
+ 'ignore_other_metrics': False,
+ 'local_rank': 0,
+ 'log_dir': './outputs/zkl-fscl/class-mtl/fea_gr05-buffer50/logs',
+ 'log_file': './outputs/zkl-fscl/class-mtl/fea_gr05-buffer50/logs/train-20241103-110318.log',
+ 'logging': <Logger MAGR-github (INFO)>,
+ 'lr': 0.0001,
+ 'minibatch_size': 3,
+ 'minibatch_size_non_default': True,
+ 'model': 'fea_gr',
+ 'model_non_default': True,
+ 'n_epochs': 50,
+ 'n_epochs_non_default': True,
+ 'n_tasks': 5,
+ 'n_tasks_non_default': True,
+ 'noise_level': 10,
+ 'non_verbose': False,
+ 'num_samples_per_task': 20,
+ 'num_workers': 16,
+ 'optim_mom': 0.0,
+ 'optim_nesterov': 0,
+ 'optim_wd': 0.0,
+ 'output_device': device(type='cuda', index=0),
+ 'phase': 'train',
+ 'pretrain': False,
+ 'proj_name': 'MAGR-github',
+ 'projector': 'backbone.Projector.Projector',
+ 'projector_args': {'in_channels': 1024},
+ 'regressor': 'backbone.DAE.DAE',
+ 'regressor_args': {'in_channels': 1024, 'out_channels': 1},
+ 'seed': 1024,
+ 'timestamp': '20241103-110318',
+ 'user': 'zkl',
+ 'validation': False,
+ 'weight_decay': 1e-05,
+ 'weight_path': None,
+ 'weight_save_path': './outputs/zkl-fscl/class-mtl/fea_gr05-buffer50/weights/weight.pth'}
+24-11-03 11:03:18 | Initialize seed with 1024
+24-11-03 11:03:18 | Load dataset: class-mtl (class-il)
+24-11-03 11:03:18 | Load model: fea_gr (12,287,264 + 295,554)
+24-11-03 11:03:37 | Evaluate T01, 254 samples, rho:-14.53 %, p: 0.0206, L2: 4588.66, RL2:    49.38
+24-11-03 11:03:41 | Evaluate T02,  20 samples, rho: 30.16 %, p: 0.1962, L2: 1284.88, RL2:    60.72
+24-11-03 11:03:41 |       T01-02, 274 samples, rho:-17.68 %, p: 0.0033, L2: 4347.51, RL2:    39.81
+24-11-03 11:03:46 | Evaluate T03,  20 samples, rho:-44.70 %, p: 0.0482, L2: 3180.57, RL2:  2884.87
+24-11-03 11:03:46 |       T01-03, 294 samples, rho:-17.09 %, p: 0.0033, L2: 4268.13, RL2:    39.08
+24-11-03 11:03:51 | Evaluate T04,  20 samples, rho:-38.54 %, p: 0.0933, L2: 4696.67, RL2: 11466.48
+24-11-03 11:03:51 |       T01-04, 314 samples, rho:-17.14 %, p: 0.0023, L2: 4295.42, RL2:    39.33
+24-11-03 11:03:57 | Evaluate T05,  20 samples, rho:  5.06 %, p: 0.8323, L2: 5554.34, RL2: 19047.82
+24-11-03 11:03:57 |       T01-05, 334 samples, rho:-16.27 %, p: 0.0029, L2: 4370.81, RL2:    40.02
+24-11-03 11:04:02 | Evaluate T06,  20 samples, rho: 39.97 %, p: 0.0808, L2: 7099.76, RL2:  8480.11
+24-11-03 11:04:02 |       T01-06, 354 samples, rho:-14.65 %, p: 0.0057, L2: 4524.98, RL2:    41.44
+24-11-03 11:04:02 | ------------| Task 01 |-------------
+24-11-03 11:04:02 | Load pretrained model state from weights/class-mtl05.pth.
+24-11-03 11:04:02 | The current metrics: 
+{'L2': 58.307181732578684,
+ 'RL2': 0.6274339040798483,
+ 'p': 5.984641491377956e-97,
+ 'rho': 90.75673367941981}
+24-11-03 11:04:02 | Learning slowly ...
+24-11-03 11:04:02 | Current task 1 - select 10 samples
+24-11-03 11:05:44 | Task 1 has 10 samples in the buffer.
+24-11-03 11:06:02 | Evaluate T01, 254 samples, rho: 90.76 %, p: 0.0000, L2:   58.29, RL2:     0.63
+24-11-03 11:06:02 | Rho: 90.76 %
+24-11-03 11:06:02 | Rho (overall): 90.76 %
+24-11-03 11:06:02 | ------------| Task 02 |-------------
+24-11-03 11:06:07 | Evaluate T02,  20 samples, rho: 45.81 %, p: 0.0422, L2:  177.54, RL2:     8.39

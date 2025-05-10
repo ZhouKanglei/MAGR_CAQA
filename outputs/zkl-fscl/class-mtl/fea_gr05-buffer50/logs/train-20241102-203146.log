@@ -1,0 +1,211 @@
+24-11-02 20:31:46 | New ./outputs/zkl-fscl/class-mtl/fea_gr05-buffer50/logs/train-20241102-203146.log.
+24-11-02 20:31:46 | Save ./outputs/zkl-fscl/class-mtl/fea_gr05-buffer50/configs/train.yaml.
+24-11-02 20:31:46 | Args: 
+{'alpha': 1,
+ 'base_pretrain_model_path': 'weights/class-mtl05.pth',
+ 'batch_num': 1,
+ 'batch_size': 5,
+ 'batch_size_non_default': True,
+ 'beta': 1,
+ 'buffer_size': 50,
+ 'buffer_size_non_default': True,
+ 'config': './configs/mtl_zkl.yaml',
+ 'config_non_default': True,
+ 'dataset': 'class-mtl',
+ 'dataset_args': {'data_root': '/home/zkl/Documents/Data/AQA/Sequence/MTL-AQA/new',
+                  'frame_length': 103,
+                  'label_path': '/home/zkl/Documents/Data/AQA/Sequence/MTL-AQA/info/final_annotations_dict_with_dive_number.pkl',
+                  'temporal_shift': [-3, 3],
+                  'test_split': '/home/zkl/Documents/Data/AQA/Sequence/MTL-AQA/info/test_split_0.pkl',
+                  'train_split': '/home/zkl/Documents/Data/AQA/Sequence/MTL-AQA/info/train_split_0.pkl',
+                  'usingDD': False},
+ 'dataset_non_default': True,
+ 'debug_mode': False,
+ 'disable_log': False,
+ 'e_lambda': 1,
+ 'exp_dir': './outputs/zkl-fscl/class-mtl/fea_gr05-buffer50',
+ 'exp_name': 'fea_gr05-buffer50',
+ 'feature_extractor': 'backbone.I3D_backbone.I3D_backbone',
+ 'feature_extractor_args': {'I3D_ckpt_path': './weights/model_rgb.pth',
+                            'I3D_class': 400},
+ 'fewshot': True,
+ 'fewshot_non_default': True,
+ 'gamma': 1,
+ 'gpus': [2, 3],
+ 'gpus_non_default': True,
+ 'ignore_other_metrics': False,
+ 'local_rank': 0,
+ 'log_dir': './outputs/zkl-fscl/class-mtl/fea_gr05-buffer50/logs',
+ 'log_file': './outputs/zkl-fscl/class-mtl/fea_gr05-buffer50/logs/train-20241102-203146.log',
+ 'logging': <Logger MAGR-github (INFO)>,
+ 'lr': 0.0001,
+ 'minibatch_size': 3,
+ 'minibatch_size_non_default': True,
+ 'model': 'fea_gr',
+ 'model_non_default': True,
+ 'n_epochs': 50,
+ 'n_epochs_non_default': True,
+ 'n_tasks': 5,
+ 'n_tasks_non_default': True,
+ 'noise_level': 10,
+ 'non_verbose': False,
+ 'num_samples_per_task': 20,
+ 'num_workers': 16,
+ 'optim_mom': 0.0,
+ 'optim_nesterov': 0,
+ 'optim_wd': 0.0,
+ 'output_device': device(type='cuda', index=0),
+ 'phase': 'train',
+ 'pretrain': True,
+ 'pretrain_non_default': True,
+ 'proj_name': 'MAGR-github',
+ 'projector': 'backbone.Projector.Projector',
+ 'projector_args': {'in_channels': 1024},
+ 'regressor': 'backbone.DAE.DAE',
+ 'regressor_args': {'in_channels': 1024, 'out_channels': 1},
+ 'seed': 1024,
+ 'timestamp': '20241102-203146',
+ 'user': 'zkl',
+ 'validation': False,
+ 'weight_decay': 1e-05,
+ 'weight_path': './outputs/zkl-fscl/class-mtl/fea_gr05-buffer50/weights/best.pth',
+ 'weight_save_path': './outputs/zkl-fscl/class-mtl/fea_gr05-buffer50/weights/weight.pth'}
+24-11-02 20:31:46 | Initialize seed with 1024
+24-11-02 20:31:46 | Load dataset: class-mtl (class-il)
+24-11-02 20:31:46 | Load model: fea_gr (12,287,264 + 295,554)
+24-11-02 20:31:47 | No pretrained model found at ./outputs/zkl-fscl/class-mtl/fea_gr05-buffer50/weights/best.pth.
+24-11-02 20:32:05 | Evaluate T01, 254 samples, rho:-14.53 %, p: 0.0206, L2: 4588.66, RL2:    49.38
+24-11-02 20:32:10 | Evaluate T02,  20 samples, rho: 30.16 %, p: 0.1962, L2: 1284.88, RL2:    60.72
+24-11-02 20:32:10 |       T01-02, 274 samples, rho:-17.68 %, p: 0.0033, L2: 4347.51, RL2:    39.81
+24-11-02 20:32:15 | Evaluate T03,  20 samples, rho:-44.70 %, p: 0.0482, L2: 3180.57, RL2:  2884.87
+24-11-02 20:32:15 |       T01-03, 294 samples, rho:-17.09 %, p: 0.0033, L2: 4268.13, RL2:    39.08
+24-11-02 20:32:20 | Evaluate T04,  20 samples, rho:-38.54 %, p: 0.0933, L2: 4696.67, RL2: 11466.48
+24-11-02 20:32:20 |       T01-04, 314 samples, rho:-17.14 %, p: 0.0023, L2: 4295.42, RL2:    39.33
+24-11-02 20:32:25 | Evaluate T05,  20 samples, rho:  5.06 %, p: 0.8323, L2: 5554.34, RL2: 19047.82
+24-11-02 20:32:25 |       T01-05, 334 samples, rho:-16.27 %, p: 0.0029, L2: 4370.81, RL2:    40.02
+24-11-02 20:32:31 | Evaluate T06,  20 samples, rho: 39.97 %, p: 0.0808, L2: 7099.76, RL2:  8480.11
+24-11-02 20:32:31 |       T01-06, 354 samples, rho:-14.65 %, p: 0.0057, L2: 4524.98, RL2:    41.44
+24-11-02 20:32:31 | ------------| Task 01 |-------------
+24-11-02 20:32:32 | Load pretrained model state from weights/class-mtl05.pth.
+24-11-02 20:32:32 | The current metrics: 
+{'L2': 58.307181732578684,
+ 'RL2': 0.6274339040798483,
+ 'p': 5.984641491377956e-97,
+ 'rho': 90.75673367941981}
+24-11-02 20:32:32 | Freeze layers ...
+24-11-02 20:32:32 | Current task 1 - select 10 samples
+24-11-02 20:34:14 | Task 1 has 10 samples in the buffer.
+24-11-02 20:34:31 | Evaluate T01, 254 samples, rho: 90.76 %, p: 0.0000, L2:   58.29, RL2:     0.63
+24-11-02 20:34:31 | Rho: 90.76 %
+24-11-02 20:34:31 | Rho (overall): 90.76 %
+24-11-02 20:34:32 | ------------| Task 02 |-------------
+24-11-02 20:34:37 | Evaluate T02,  20 samples, rho: 45.81 %, p: 0.0422, L2:  177.54, RL2:     8.39
+24-11-02 20:39:23 | Current task 2 - select 10 samples
+24-11-02 20:39:32 | Task 1 has 10 samples in the buffer.
+24-11-02 20:39:32 | Task 2 has 10 samples in the buffer.
+24-11-02 20:39:49 | Evaluate T01, 254 samples, rho: 88.69 %, p: 0.0000, L2:  325.73, RL2:     3.51
+24-11-02 20:39:54 | Evaluate T02,  20 samples, rho:  1.73 %, p: 0.9423, L2:  131.63, RL2:     6.22
+24-11-02 20:39:54 |       T01-02, 274 samples, rho: 89.00 %, p: 0.0000, L2:  311.56, RL2:     2.85
+24-11-02 20:39:54 | Rho: 45.21 %
+24-11-02 20:39:54 | Rho (overall): 89.00 %
+24-11-02 20:39:55 | ------------| Task 03 |-------------
+24-11-02 20:40:00 | Evaluate T03,  20 samples, rho:-45.22 %, p: 0.0453, L2:  172.47, RL2:   156.44
+24-11-02 20:44:53 | Current task 3 - select 10 samples
+24-11-02 20:45:03 | Task 1 has 10 samples in the buffer.
+24-11-02 20:45:03 | Task 2 has 10 samples in the buffer.
+24-11-02 20:45:03 | Task 3 has 10 samples in the buffer.
+24-11-02 20:45:21 | Evaluate T01, 254 samples, rho: 89.36 %, p: 0.0000, L2:   99.22, RL2:     1.07
+24-11-02 20:45:25 | Evaluate T02,  20 samples, rho: 43.55 %, p: 0.0549, L2:  229.18, RL2:    10.83
+24-11-02 20:45:25 |       T01-02, 274 samples, rho: 90.55 %, p: 0.0000, L2:  108.70, RL2:     1.00
+24-11-02 20:45:30 | Evaluate T03,  20 samples, rho:-19.04 %, p: 0.4214, L2:   39.97, RL2:    36.25
+24-11-02 20:45:30 |       T01-03, 294 samples, rho: 90.08 %, p: 0.0000, L2:  104.03, RL2:     0.95
+24-11-02 20:45:31 | Rho: 37.96 %
+24-11-02 20:45:31 | Rho (overall): 90.08 %
+24-11-02 20:45:31 | ------------| Task 04 |-------------
+24-11-02 20:45:36 | Evaluate T04,  20 samples, rho: 22.76 %, p: 0.3345, L2:   44.12, RL2:   107.71
+24-11-02 20:50:48 | Current task 4 - select 10 samples
+24-11-02 20:50:58 | Task 1 has 10 samples in the buffer.
+24-11-02 20:50:58 | Task 2 has 10 samples in the buffer.
+24-11-02 20:50:58 | Task 3 has 10 samples in the buffer.
+24-11-02 20:50:58 | Task 4 has 10 samples in the buffer.
+24-11-02 20:51:16 | Evaluate T01, 254 samples, rho: 88.25 %, p: 0.0000, L2:  114.69, RL2:     1.23
+24-11-02 20:51:20 | Evaluate T02,  20 samples, rho: 40.69 %, p: 0.0750, L2:  403.26, RL2:    19.06
+24-11-02 20:51:20 |       T01-02, 274 samples, rho: 89.53 %, p: 0.0000, L2:  135.75, RL2:     1.24
+24-11-02 20:51:25 | Evaluate T03,  20 samples, rho:-26.19 %, p: 0.2648, L2:   79.21, RL2:    71.85
+24-11-02 20:51:25 |       T01-03, 294 samples, rho: 88.79 %, p: 0.0000, L2:  131.91, RL2:     1.21
+24-11-02 20:51:30 | Evaluate T04,  20 samples, rho: 11.99 %, p: 0.6147, L2:   22.36, RL2:    54.58
+24-11-02 20:51:30 |       T01-04, 314 samples, rho: 87.87 %, p: 0.0000, L2:  124.93, RL2:     1.14
+24-11-02 20:51:31 | Rho: 28.69 %
+24-11-02 20:51:31 | Rho (overall): 87.87 %
+24-11-02 20:51:31 | ------------| Task 05 |-------------
+24-11-02 20:51:36 | Evaluate T05,  20 samples, rho:-12.38 %, p: 0.6031, L2:   48.85, RL2:   167.53
+24-11-02 20:56:53 | Current task 5 - select 10 samples
+24-11-02 20:57:04 | Task 1 has 10 samples in the buffer.
+24-11-02 20:57:04 | Task 2 has 10 samples in the buffer.
+24-11-02 20:57:04 | Task 3 has 10 samples in the buffer.
+24-11-02 20:57:04 | Task 4 has 10 samples in the buffer.
+24-11-02 20:57:04 | Task 5 has 10 samples in the buffer.
+24-11-02 20:57:21 | Evaluate T01, 254 samples, rho: 89.34 %, p: 0.0000, L2:  137.57, RL2:     1.48
+24-11-02 20:57:25 | Evaluate T02,  20 samples, rho: 45.13 %, p: 0.0458, L2:  535.48, RL2:    25.31
+24-11-02 20:57:25 |       T01-02, 274 samples, rho: 90.60 %, p: 0.0000, L2:  166.61, RL2:     1.53
+24-11-02 20:57:30 | Evaluate T03,  20 samples, rho: -0.68 %, p: 0.9774, L2:  146.62, RL2:   132.99
+24-11-02 20:57:30 |       T01-03, 294 samples, rho: 90.00 %, p: 0.0000, L2:  165.25, RL2:     1.51
+24-11-02 20:57:35 | Evaluate T04,  20 samples, rho: 16.31 %, p: 0.4920, L2:   23.78, RL2:    58.05
+24-11-02 20:57:35 |       T01-04, 314 samples, rho: 89.04 %, p: 0.0000, L2:  156.24, RL2:     1.43
+24-11-02 20:57:41 | Evaluate T05,  20 samples, rho:-10.64 %, p: 0.6552, L2:   23.72, RL2:    81.36
+24-11-02 20:57:41 |       T01-05, 334 samples, rho: 87.92 %, p: 0.0000, L2:  148.31, RL2:     1.36
+24-11-02 20:57:41 | Rho: 27.89 %
+24-11-02 20:57:41 | Rho (overall): 87.92 %
+24-11-02 20:57:41 | ------------| Task 06 |-------------
+24-11-02 20:57:47 | Evaluate T06,  20 samples, rho: 30.45 %, p: 0.1918, L2:   44.52, RL2:    53.18
+24-11-02 21:03:06 | Evaluate T01, 254 samples, rho: 89.56 %, p: 0.0000, L2:  289.25, RL2:     3.11
+24-11-02 21:03:11 | Evaluate T02,  20 samples, rho: 54.31 %, p: 0.0133, L2:  874.86, RL2:    41.34
+24-11-02 21:03:11 |       T01-02, 274 samples, rho: 90.92 %, p: 0.0000, L2:  331.99, RL2:     3.04
+24-11-02 21:03:16 | Evaluate T03,  20 samples, rho:  6.40 %, p: 0.7888, L2:  427.25, RL2:   387.52
+24-11-02 21:03:16 |       T01-03, 294 samples, rho: 90.63 %, p: 0.0000, L2:  338.47, RL2:     3.10
+24-11-02 21:03:21 | Evaluate T04,  20 samples, rho: 26.33 %, p: 0.2620, L2:  158.32, RL2:   386.53
+24-11-02 21:03:21 |       T01-04, 314 samples, rho: 89.64 %, p: 0.0000, L2:  327.00, RL2:     2.99
+24-11-02 21:03:27 | Evaluate T05,  20 samples, rho:-12.23 %, p: 0.6076, L2:   89.56, RL2:   307.14
+24-11-02 21:03:27 |       T01-05, 334 samples, rho: 88.19 %, p: 0.0000, L2:  312.78, RL2:     2.86
+24-11-02 21:03:32 | Evaluate T06,  20 samples, rho: 37.85 %, p: 0.0998, L2:   31.33, RL2:    37.42
+24-11-02 21:03:32 |       T01-06, 354 samples, rho: 88.47 %, p: 0.0000, L2:  296.88, RL2:     2.72
+24-11-02 21:03:32 | Rho: 33.70 %
+24-11-02 21:03:32 | Rho (overall): 88.47 %
+24-11-02 21:03:33 | Results: 
+{'accs': [90.75819876665956,
+          45.20988119912118,
+          37.958313021275686,
+          28.68733723359016,
+          27.893043835414836,
+          33.70290668703618],
+ 'accs_mask_classes': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+ 'bwt': 17.912947922489487,
+ 'bwt_mask_classes': 0.0,
+ 'forgetting': 2.685234487483211,
+ 'forgetting_mask_classes': 0.0,
+ 'fullaccs': [[90.75819876665956],
+              [88.68978860158747, 1.7299737966548896],
+              [89.36160435537258, 43.55020992448613, -19.03687521603165],
+              [88.25410828366827,
+               40.691992347404145,
+               -26.185108992802427,
+               11.988357296090635],
+              [89.34098325247315,
+               45.12975121708408,
+               -0.6772010946414421,
+               16.313271004173963,
+               -10.641585202015564],
+              [89.55852847624011,
+               54.306133964557844,
+               6.395788116058064,
+               26.32886064394589,
+               -12.226502146996607,
+               37.85463106841182]],
+ 'fullaccs_mask_classes': [[0.0],
+                           [0.0, 0.0],
+                           [0.0, 0.0, -0.0],
+                           [0.0, 0.0, -0.0, 0.0],
+                           [0.0, 0.0, -0.0, 0.0, -0.0],
+                           [0.0, 0.0, 0.0, 0.0, -0.0, 0.0]],
+ 'fwt': 9.89428087844075,
+ 'fwt_mask_classes': 0.0}

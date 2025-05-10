@@ -1,0 +1,100 @@
+25-05-10 18:30:20 | New ./outputs/ubuntu-fscl/class-mtl/fewshot_from_scratch/logs/test-20250510-183020.log.
+25-05-10 18:30:20 | Save ./outputs/ubuntu-fscl/class-mtl/fewshot_from_scratch/configs/test.yaml.
+25-05-10 18:30:20 | Args: 
+{'alpha': 1,
+ 'base_pretrain': False,
+ 'base_pretrain_model_path': 'weights/class-mtl05.pth',
+ 'batch_num': 1,
+ 'batch_size': 5,
+ 'batch_size_non_default': True,
+ 'beta': 1,
+ 'buffer_size': 50,
+ 'buffer_size_non_default': True,
+ 'config': './configs/mtl_ubuntu.yaml',
+ 'config_non_default': True,
+ 'dataset': 'class-mtl',
+ 'dataset_args': {'data_root': '/mnt/Data/AQA/Sequence/MTL-AQA/new',
+                  'frame_length': 103,
+                  'label_path': '/mnt/Data/AQA/Sequence/MTL-AQA/info/final_annotations_dict_with_dive_number.pkl',
+                  'temporal_shift': [-3, 3],
+                  'test_split': '/mnt/Data/AQA/Sequence/MTL-AQA/info/test_split_0.pkl',
+                  'train_split': '/mnt/Data/AQA/Sequence/MTL-AQA/info/train_split_0.pkl',
+                  'usingDD': False},
+ 'dataset_non_default': True,
+ 'debug_mode': False,
+ 'disable_log': False,
+ 'e_lambda': 1,
+ 'exp_dir': './outputs/ubuntu-fscl/class-mtl/fewshot_from_scratch',
+ 'exp_name': 'fewshot_from_scratch',
+ 'exp_name_non_default': True,
+ 'feature_extractor': 'backbone.I3D_backbone.I3D_backbone',
+ 'feature_extractor_args': {'I3D_ckpt_path': './weights/model_rgb.pth',
+                            'I3D_class': 400},
+ 'fewshot': True,
+ 'fewshot_non_default': True,
+ 'gamma': 1,
+ 'gpus': [0, 1],
+ 'gpus_non_default': True,
+ 'ignore_other_metrics': False,
+ 'local_rank': 0,
+ 'log_dir': './outputs/ubuntu-fscl/class-mtl/fewshot_from_scratch/logs',
+ 'log_file': './outputs/ubuntu-fscl/class-mtl/fewshot_from_scratch/logs/test-20250510-183020.log',
+ 'logging': <Logger MAGR-github (INFO)>,
+ 'lr': 0.0001,
+ 'minibatch_size': 3,
+ 'minibatch_size_non_default': True,
+ 'model': 'fea_gr',
+ 'model_non_default': True,
+ 'n_epochs': 50,
+ 'n_epochs_non_default': True,
+ 'n_tasks': 5,
+ 'n_tasks_non_default': True,
+ 'noise_level': 10,
+ 'non_verbose': False,
+ 'num_samples_per_task': 20,
+ 'num_workers': 16,
+ 'optim_mom': 0.0,
+ 'optim_nesterov': 0,
+ 'optim_wd': 0.0,
+ 'output_device': device(type='cuda', index=0),
+ 'phase': 'test',
+ 'phase_non_default': True,
+ 'pretrain': False,
+ 'proj_name': 'MAGR-github',
+ 'projector': 'backbone.Projector.Projector',
+ 'projector_args': {'in_channels': 1024},
+ 'regressor': 'backbone.DAE.DAE',
+ 'regressor_args': {'in_channels': 1024, 'out_channels': 1},
+ 'seed': 1024,
+ 'timestamp': '20250510-183020',
+ 'user': 'ubuntu',
+ 'validation': False,
+ 'weight_decay': 1e-05,
+ 'weight_path': None,
+ 'weight_save_path': './outputs/ubuntu-fscl/class-mtl/fewshot_from_scratch/weights/weight.pth'}
+25-05-10 18:30:20 | Initialize seed with 1024
+25-05-10 18:30:20 | Load dataset: class-mtl (class-il)
+25-05-10 18:30:20 | Load model: fea_gr (12,287,264 + 295,554)
+25-05-10 18:30:21 | No pretrained model found at ./outputs/ubuntu-fscl/class-mtl/fewshot_from_scratch/weights/best.pth.
+25-05-10 18:30:21 | Load pretrained model state from ./outputs/ubuntu-fscl/class-mtl/fewshot_from_scratch/weights/last-task5.pth.
+25-05-10 18:30:21 | Current: 
+{'L2': 116.83325033933083,
+ 'RL2': 1.0698770663614006,
+ 'p': 3.8611923643533967e-132,
+ 'rho': 90.42459407633477}
+25-05-10 18:30:21 | Best: 
+{'L2': 132.5366173343367,
+ 'RL2': 1.2136775012873946,
+ 'p': 1.6814546672176682e-119,
+ 'rho': 91.8259864003907}
+25-05-10 18:30:44 | Evaluate T01, 254 samples, rho: 91.06 %, p: 0.0000, L2:  110.84, RL2:     1.19
+25-05-10 18:30:49 | Evaluate T02,  20 samples, rho: 28.36 %, p: 0.2257, L2:  429.37, RL2:    20.29
+25-05-10 18:30:49 |       T01-02, 274 samples, rho: 91.68 %, p: 0.0000, L2:  134.09, RL2:     1.23
+25-05-10 18:30:56 | Evaluate T03,  20 samples, rho: 39.13 %, p: 0.0880, L2:  111.24, RL2:   100.90
+25-05-10 18:30:56 |       T01-03, 294 samples, rho: 91.82 %, p: 0.0000, L2:  132.53, RL2:     1.21
+25-05-10 18:31:02 | Evaluate T04,  20 samples, rho: 34.30 %, p: 0.1388, L2:   54.13, RL2:   132.14
+25-05-10 18:31:02 |       T01-04, 314 samples, rho: 91.20 %, p: 0.0000, L2:  127.54, RL2:     1.17
+25-05-10 18:31:09 | Evaluate T05,  20 samples, rho:  6.49 %, p: 0.7857, L2:   42.21, RL2:   144.77
+25-05-10 18:31:09 |       T01-05, 334 samples, rho: 89.89 %, p: 0.0000, L2:  122.43, RL2:     1.12
+25-05-10 18:31:15 | Evaluate T06,  20 samples, rho: 30.83 %, p: 0.1860, L2:   23.32, RL2:    27.85
+25-05-10 18:31:15 |       T01-06, 354 samples, rho: 90.42 %, p: 0.0000, L2:  116.83, RL2:     1.07
