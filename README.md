@@ -17,7 +17,8 @@
   <div>
   ECCV 2024 Oral Presentation > 
   <a href='./supp/MAGR-poster.pdf'> Poster </a> |
-  <a href='./supp/MAGR-slides.pdf'> Slides </a>
+  <a href='./supp/MAGR-slides.pdf'> Slides </a> |
+  <a href='https://www.youtube.com/watch?v=Llyiw-CpOew'> Video </a>
   </div>
   <br/>
 </div>
